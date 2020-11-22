@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartuvės</title>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="gameDifficulty">
+        <p>Sudėtingumas:</p>
+        <div class="easyMediumHard">
+            <div class="easy">Lengvas
+                <img class="easySelected" src="images/selected.svg">
+            </div>
+            <div class="medium">Vidutinis
+                <img class="mediumSelected" src="images/selected.svg">
+            </div>
+            <div class="hard">Sunkus
+                <img class="hardSelected" src="images/selected.svg">
+            </div>
+        </div>
+    </div>
+
+    <audio class="correctLetter" src="audio/correctLetter.mp3"></audio>
+    <audio class="wrongLetter" src="audio/wrongLetter.mp3"></audio>
+    <audio class="easyClick" src="audio/easy.mp3"></audio>
+    <audio class="mediumClick" src="audio/medium.mp3"></audio>
+    <audio class="hardClick" src="audio/hard.mp3"></audio>
+    <audio class="nextClick" src="audio/click.mp3"></audio>
+    <div class="mainGame">
+        <div class="word"></div>
+        <div class="hintDiv">
+            <p>Užuomina:<span class="hint">Labadien</span></p>
+        </div>
+            <div class="mark"><h1 class="markGreat">PUIKU!</h1><h1 class="markBad">BLOGAI!</h1></div>
+        <div class="progressBar">
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <div class="x">
+        <div class="y"></div>
+        <div class="z"></div>
+    </div>
+
+    <div class="popup" id="popup">
+        <audio class="gameOverAudio" src="audio/gameOver.mp3"></audio>
+        <h2 class="gameOver" id="gameOver">Žaidimas baigtas!</h2>
+        <h2 class="gameOverSmall" id="gameOverSmall">Jūs per daug kartų suklydote.</h2>
+        <h2 class="gameOverSmall" id="gameOverSmall">Naujas žaidimas prasidės po:</h2>
+        <!-- <p class="again">Žaisti iš naujo</p> -->
+        <p class="timer" id="timer"></p>
+    </div>
+
+    <div class="congrats">
+        <audio class="winnerAudio" src="audio/winner.mp3"></audio>
+        <p class="correctWord">Sveikiname! Žodis atspėtas!</p>
+        <p class="next">Toliau</p>
+    </div>
+</body>
+
+</html>

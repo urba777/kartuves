@@ -1,0 +1,316 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    background-image: url(images/background-one.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation-name: bgMoving;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+.gameDifficulty {
+    padding-top: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    left: 0px;
+    max-width: 604px;
+    width: 90%;
+    font-weight: 500;
+}
+
+.mark {
+    padding-top: 40px;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 700;
+    height: 52px;
+}
+
+.markGreat {
+    color: #27ae60;
+}
+
+.markBad {
+    color: #c0392b;
+}
+
+.hint {
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.hintDiv {
+    padding-top: 50px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+}
+
+.easyMediumHard {
+    max-width: 400px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.easySelected {
+    opacity: 0;
+}
+
+.mediumSelected {
+    opacity: 0;
+}
+
+.hardSelected {
+    opacity: 0;
+}
+
+.gameDifficulty img {
+    width: 20px;
+    margin-left: 5px;
+}
+
+.easy {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.medium {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.hard {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.easy:hover {
+    text-decoration: underline;
+}
+
+.medium:hover {
+    text-decoration: underline;
+}
+
+.hard:hover {
+    text-decoration: underline;
+}
+
+.word {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.word div {
+    color: #fff;
+    font-size: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 90px;
+    border: 2px solid #fff;
+    text-align: center;
+    height: 100px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 12px;
+
+    animation-name: buttonBG;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.progressBar {
+    width: 600px;
+    border: 2px solid #fff;
+    height: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 12px;
+}
+
+.progressBar .bar {
+    height: 100%;
+    background-image: url(images/background-three.jpg);
+    animation-name: bgProgressMoving;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 50%;
+    transition: width 0.3s;
+    border-radius: 12px;
+}
+
+.popup {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1000px;
+    width: 90%;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.gameOver {
+    color: red;
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.gameOverSmall {
+    font-size: 20px;
+    font-weight: 500;
+    color: red;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.timer {
+    text-align: center;
+    color: red;
+    font-size: 200px;
+}
+
+.congrats {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 715px;
+    width: 90%;
+    white-space: nowrap;
+    font-size: 37px;
+    text-align: center;
+}
+
+.correctWord {
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.next {
+    border: 1px solid #fff;
+    padding: 20px;
+    color: #fff;
+    font-weight: 500;
+    background-image: url(images/button-bg.png);
+    max-width: 255px;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    animation-name: buttonBG;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.next:active {
+    transform: scale(0.9);
+}
+
+/* .again {
+    padding: 20px;
+    color: red;
+    font-weight: 500;
+    background-color: lightgreen;
+    max-width: 255px;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.again:active {
+    transform: scale(0.9);
+} */
+
+@keyframes bgMoving {
+    0% {
+        background-image: url(images/background-one.jpg);
+    }
+    25% {
+        background-image: url(images/background-two.jpg);
+    }
+    50% {
+        background-image: url(images/background-three.jpg);
+    }
+    75% {
+        background-image: url(images/background-two.jpg);
+    }
+    100% {
+        background-image: url(images/background-one.jpg);
+    }
+}
+@keyframes bgProgressMoving {
+    0% {
+        background-position-x: left;
+        background-image: url(images/background-three.jpg);
+    }
+    25% {
+        background-position-x: right;
+        background-image: url(images/background-two.jpg);
+    }
+    50% {
+        background-position-x: left;
+        background-image: url(images/background-one.jpg);
+    }
+    75% {
+        background-position-x: right;
+        background-image: url(images/background-two.jpg);
+    }
+    100% {
+        background-position-x: left;
+        background-image: url(images/background-three.jpg);
+    }
+}
+
+@keyframes buttonBG {
+    0% {
+        border-radius: 50%;
+        transform: scale(1) rotate3d(-10, 0, 0, 0.1turn);
+    }
+    25% {
+        transform: scale(1.1) rotate3d(0, 20, 0, 0.1turn);
+        border-radius: 10%;
+
+    }
+    50% {
+        transform: scale(1.2) rotate3d(10, 0, 0, 0.1turn);
+        border-radius: 50%;
+        
+    }
+    75% {
+        transform: scale(1.1) rotate3d(0, -20, 0, 0.1turn);
+        border-radius: 10%;
+    }
+    100% {
+        transform: scale(1) rotate3d(-10, 0, 0, 0.1turn);
+        background-position-y: 100%;
+        background-position-x: 100%;
+        border-radius: 50%;
+    }
